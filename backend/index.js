@@ -15,5 +15,8 @@ mongoose
   .catch((err) => console.error(err));
 
 app.use('/api/', require('./routes/routers'))
+app.get("/home", (req, res) =>{
+  res.send("Home Page")
+})
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
